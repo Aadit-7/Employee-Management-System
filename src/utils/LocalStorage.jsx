@@ -220,8 +220,8 @@ export const setLocalStorage = () => {
 };
 
 export const getLocalStorage = () => {
-  const data = localStorage.getItem("employees");
-  const data2 = localStorage.getItem("admin");
-  console.log(JSON.parse(data));
-  console.log(JSON.parse(data2));
+  const employees = localStorage.getItem("employees");
+  const admin = localStorage.getItem("admin");
+
+  return { employees, admin };
 };
