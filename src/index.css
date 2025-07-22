@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Permanent+Marker&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Permanent+Marker&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Permanent+Marker&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&family=Short+Stack&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  /* --font-myFont: "Merriweather", serif; */
+  /* --font-myFont2: "Roboto Flex", sans-serif; */
+  --font-myFont3: "Beau Rivage", cursive;
+  --font-myFont4: "Permanent Marker", cursive;
+  /* --font-myFont5: "Shantell Sans", sans-serif; */
+  --font-myFont6: "Short Stack", cursive;
+}
+
+/* Hide scrollbar but allow scroll */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
