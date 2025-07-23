@@ -10,6 +10,8 @@ function App() {
   const [user, setUser] = useState(null);
   const [loggedInUserData, setLoggedInUserData] = useState(null);
   const authData = useContext(AuthContext);
+  // console.log(authData);
+  
 
   useEffect(() => {
     if (authData) {
