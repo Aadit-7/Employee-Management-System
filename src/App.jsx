@@ -8,11 +8,12 @@ import { AuthContext } from "./context/AuthProvider";
 
 function App() {
   const [user, setUser] = useState(null);
-  const authData = useContext(AuthContext); // ✅ Moved up
+  const [loggedInUserData, setLoggedInUserData] = useState(null);
+  const authData = useContext(AuthContext);
 
   useEffect(() => {
     if (authData) {
-      const loggedInUser = localStorage.getItem("loggedInUser"); // ✅ Fixed missing 'const'
+      const loggedInUser = localStorage.getItem("loggedInUser");
       // No additional logic added as per your instruction
     }
   }, [authData]);
@@ -24,15 +25,18 @@ function App() {
     ) {
       setUser("admin");
       localStorage.setItem("loggedInUser", JSON.stringify({ role: "admin" }));
-    } else if (
-      authData &&
-      authData.employees.find((e) => email == e.email && password == e.password)
-    ) {
-      setUser("employees"); // ✅ Fixed typo: was "emplyees"
-      localStorage.setItem(
-        "loggedInUser",
-        JSON.stringify({ role: "employees" })
+    } else if (authData) {
+      const employees = authData.employees.find(
+        (e) => email == e.email && password == e.password
       );
+      if (employees) {
+        setUser("employees");
+        setLoggedInUserData(employees);
+        localStorage.setItem(
+          "loggedInUser",
+          JSON.stringify({ role: "employees" })
+        );
+      }
     } else {
       alert("Invalid Cradentials");
     }
@@ -44,9 +48,8 @@ function App() {
       {user == "admin" ? (
         <AdminDashboard />
       ) : user == "employees" ? (
-        <EmployeeDashboard />
+        <EmployeeDashboard data={loggedInUserData} />
       ) : null}
-      {/* ✅ Fixed render logic */}
     </div>
   );
 }

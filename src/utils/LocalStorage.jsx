@@ -9,8 +9,15 @@ const admin = [
 const employees = [
   {
     id: "emp001",
-    email: "john.doe@example.com",
+    firstName: "Aarav",
+    email: "emp@1.com",
     password: "123",
+    taskNumbers: {
+      active: 1,
+      completed: 1,
+      failed: 1,
+      newTask: 0,
+    },
     tasks: [
       {
         completed: true,
@@ -46,8 +53,15 @@ const employees = [
   },
   {
     id: "emp002",
-    email: "jane.smith@example.com",
+    firstName: "Diya",
+    email: "emp@2.com",
     password: "123",
+    taskNumbers: {
+      active: 2,
+      completed: 2,
+      failed: 0,
+      newTask: 2,
+    },
     tasks: [
       {
         completed: true,
@@ -93,8 +107,15 @@ const employees = [
   },
   {
     id: "emp003",
-    email: "mike.williams@example.com",
+    firstName: "Kabir",
+    email: "emp@3.com",
     password: "123",
+    taskNumbers: {
+      active: 2,
+      completed: 0,
+      failed: 1,
+      newTask: 1,
+    },
     tasks: [
       {
         completed: false,
@@ -130,8 +151,15 @@ const employees = [
   },
   {
     id: "emp004",
-    email: "lisa.jordan@example.com",
+    firstName: "Ishita",
+    email: "emp@4.com",
     password: "123",
+    taskNumbers: {
+      active: 1,
+      completed: 2,
+      failed: 0,
+      newTask: 1,
+    },
     tasks: [
       {
         completed: true,
@@ -167,8 +195,15 @@ const employees = [
   },
   {
     id: "emp005",
-    email: "alex.martin@example.com",
+    firstName: "Rohan",
+    email: "emp@5.com",
     password: "123",
+    taskNumbers: {
+      active: 2,
+      completed: 2,
+      failed: 0,
+      newTask: 2,
+    },
     tasks: [
       {
         completed: false,
