@@ -6,14 +6,12 @@ const FailedTask = () => {
       <div>
         <div className="flex justify-between mb-2 pb-5 text-sm font-semibold">
           <span className="bg-green-100 text-green-700 px-2 py-1 rounded-lg">
-            Low
+            {data.priority}
           </span>
-          <span className="text-gray-500">2025-07-14</span>
+          <span className="text-gray-500">{data.date}</span>
         </div>
-        <h1 className="text-xl font-semibold mt-2 mb-1">Setup Routing</h1>
-        <p className="text-gray-700 mt-3 text-sm">
-          Add React Router for navigation between pages.
-        </p>
+        <h1 className="text-xl font-semibold mt-2 mb-1">{data.title}</h1>
+        <p className="text-gray-700 mt-3 text-sm">{data.description}</p>
       </div>
       <div className="flex gap-2 mt-5">
         <button className="bg-red-500 w-full text-white px-3 py-1 rounded">

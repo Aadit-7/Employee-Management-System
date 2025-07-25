@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { use, useContext, useEffect, useState } from "react";
 import "./App.css";
 //Use myFont 3,4,6
 import Login from "./components/Auth/Login";
@@ -11,14 +11,27 @@ function App() {
   const [loggedInUserData, setLoggedInUserData] = useState(null);
   const authData = useContext(AuthContext);
   // console.log(authData);
-  
+
+  // useEffect(() => {
+  //   if (authData) {
+  //     const loggedInUser = localStorage.getItem("loggedInUser");
+  //   }
+  // }, [authData]);
+
+  // New logic for permanent login even after refreshing the page
 
   useEffect(() => {
-    if (authData) {
-      const loggedInUser = localStorage.getItem("loggedInUser");
-      // No additional logic added as per your instruction
+    const loggedInUser = localStorage.getItem("loggedInUser");
+
+    if (loggedInUser) {
+      // console.log("Hai login ");
+      const userData = JSON.parse(loggedInUser);
+      // console.log(userData);
+
+      setUser(userData.role);
+      setLoggedInUserData(userData.data);
     }
-  }, [authData]);
+  }, []);
 
   const handelLogin = (email, password) => {
     if (

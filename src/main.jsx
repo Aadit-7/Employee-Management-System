@@ -4,7 +4,8 @@ import "./index.css";
 import App from "./App.jsx";
 import AuthProvider from "./context/AuthProvider.jsx";
 
-// localStorage.clear(); used to clear the cache in the local storage
+// localStorage.clear();
+// //used to clear the cache in the local storage
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
